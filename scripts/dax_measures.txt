@@ -1,0 +1,28 @@
+-- Copie cada medida no Power BI (Modelagem -> Nova medida).
+-- Substitua 'repos' pelo nome da tabela que apareceu no painel Campos (ex.: repos_concatenated).
+
+-- 1) Total de repositórios
+Total Repos = COUNTROWS('repos')
+
+-- 2) Média e mediana de stars
+Media Stars = AVERAGE('repos'[stars])
+Mediana Stars = MEDIAN('repos'[stars])
+
+-- 3) Média e mediana de forks
+Media Forks = AVERAGE('repos'[forks])
+Mediana Forks = MEDIAN('repos'[forks])
+
+-- 4) Desvio padrão de stars
+DesvioPadrao Stars = STDEV.P('repos'[stars])
+
+-- 5) Percentual de linguagem desconhecida
+Percentual Language Desconhecido = 
+VAR total = COUNTROWS('repos')
+VAR semLang = COUNTROWS(FILTER('repos', 'repos'[language] = "Desconhecido" || ISBLANK('repos'[language])))
+RETURN DIVIDE(semLang, total, 0)
+
+-- 6) Contagem por mês (use em gráfico de linhas com eixo YearMonth)
+Repos por Mes = COUNTROWS('repos')
+
+-- 7) Top N (exemplo usando RANKX para classificação por stars)
+Rank by Stars = RANKX(ALL('repos'), CALCULATE(SUM('repos'[stars])), , DESC, Dense)
