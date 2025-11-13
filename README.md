@@ -266,7 +266,7 @@ Para responder a essa questão, analisam-se as métricas de **dependências** e 
 
 Os gráficos demonstram que repositórios com **maior dependência de bibliotecas externas** tendem a apresentar **maior exposição a CVEs**, embora existam exceções em projetos mais maduros, que mantêm suas dependências **atualizadas e monitoradas**.
 
-![Gráfico RQ1 — Relação entre dependências e vulnerabilidades](/results/chart_cve.png)
+![Gráfico RQ1 — Relação entre dependências e vulnerabilidades](/imgs/chart_cve.png)
 
 Essa análise sugere que a **redução de dependências externas**, substituindo-as por **funções nativas**, pode efetivamente **diminuir a superfície de ataque**, contribuindo para a **melhoria da segurança** do ecossistema.
 
@@ -278,7 +278,7 @@ Com base no gráfico que analisa a soma de **avg_complexity**, **lines_of_code**
 
 Ao substituir bibliotecas externas por funções nativas, espera-se uma **redução gradual da complexidade média e do tamanho do código**, devido à **eliminação de dependências redundantes** e à **simplificação da base**.
 
-![Gráfico RQ2 — Complexidade e tamanho do código por repositório](/results/chart.png)
+![Gráfico RQ2 — Complexidade e tamanho do código por repositório](/imgs/chart_complexity.png)
 
 Essas visualizações indicam que projetos com **menor número de dependências** tendem a apresentar **complexidade mais controlada**, reforçando a hipótese de que a **migração para funções nativas** pode tornar o código **mais estável, eficiente e de manutenção mais simples**.
 
