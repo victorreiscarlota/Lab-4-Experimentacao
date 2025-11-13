@@ -262,7 +262,7 @@ fiel ao módulo ou pacote que realmente compõe o objeto de estudo.
 
 ### RQ1 — A substituição de bibliotecas externas reduz a superfície de ataque e a exposição a vulnerabilidades conhecidas no ecossistema do projeto?
 
-Para responder a essa questão, analisam-se as métricas de **dependências** e **vulnerabilidades conhecidas** (`vulnerable_deps` e `vuln_ratio`).
+Para responder a essa questão, analisam-se as métricas de **dependências** e **vulnerabilidades conhecidas** (`deps` e `cves.length`).
 
 Os gráficos demonstram que repositórios com **maior dependência de bibliotecas externas** tendem a apresentar **maior exposição a CVEs**, embora existam exceções em projetos mais maduros, que mantêm suas dependências **atualizadas e monitoradas**.
 
@@ -282,7 +282,7 @@ Ao substituir bibliotecas externas por funções nativas, espera-se uma **reduç
 
 Essas visualizações indicam que projetos com **menor número de dependências** tendem a apresentar **complexidade mais controlada**, reforçando a hipótese de que a **migração para funções nativas** pode tornar o código **mais estável, eficiente e de manutenção mais simples**.
 
-## 🧠 Conclusão
+## Seção 4: Resultados
 
 As visualizações produzidas evidenciam que:
 
